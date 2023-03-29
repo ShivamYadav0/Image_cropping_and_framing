@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./index.css" />
     <link rel="stylesheet" href="/cropper.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Image Cropper</title>
   </head>
   <body>
     <div id="load">
@@ -21,14 +26,14 @@
             src="./assets/WhatsApp_Image_2023-03-28_at_8.19.50_PM-removebg-preview.png"
           />
           <div class="add">
-            <div  id="left-arrow-div">
-            <svg xmlns="http://www.w3.org/2000/svg" id="left-arrow">
-              <path
-                fill="#6563ff"
-                d="M14.121 17.243a.997.997 0 0 1-.707-.293l-4.242-4.243a1 1 0 0 1 0-1.414l4.242-4.243a1 1 0 0 1 1.414 1.414L11.293 12l3.535 3.536a1 1 0 0 1-.707 1.707Z"
-              ></path>
-            </svg>
-          </div>
+            <div id="left-arrow-div">
+              <svg xmlns="http://www.w3.org/2000/svg" id="left-arrow">
+                <path
+                  fill="#6563ff"
+                  d="M14.121 17.243a.997.997 0 0 1-.707-.293l-4.242-4.243a1 1 0 0 1 0-1.414l4.242-4.243a1 1 0 0 1 1.414 1.414L11.293 12l3.535 3.536a1 1 0 0 1-.707 1.707Z"
+                ></path>
+              </svg>
+            </div>
             <p class="text">Add Image/Icon</p>
           </div>
         </div>
@@ -45,31 +50,54 @@
         </div>
         <div id="img-div"></div>
       </div>
-       <div id="hide" style="display: none;"></div>
-      <div class="container container-after frame-wrapper"  style="display: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cancel"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+      <div id="hide" style="display: none"></div>
+      <div
+        class="container container-after frame-wrapper"
+        style="display: none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cancel">
+          <path
+            d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
+          ></path>
+        </svg>
         <span>Uploaded Image</span>
-          <div class="image-workspace-after">
-           
-            <img id="onframe-image" src="" alt="" />
-           
-          </div>
-          <div id="frame-selector" class="framer-selector-class">
-            <button id="fr5" style="border-radius: 10px; background-color: transparent; font-weight: 800;">Original</button>
-           <img class="imgfr" id="fr1" src="/assets/user_image_frame_1.png" />
-           <img  class="imgfr" id="fr2" src="/assets/user_image_frame_2.png" />
-           <img  class="imgfr" id="fr3" src="/assets/user_image_frame_3.png" />
-           <img  class="imgfr" id="fr4" src="/assets/user_image_frame_4.png" />
-          </div>
-          <div class="action-button-after add">
-            <button class="download-after bt">Use this image</button>
-          </div>
+        <div class="image-workspace-after">
+          <img id="onframe-image" src="" alt="" />
+        </div>
+        <div id="frame-selector" class="framer-selector-class">
+          <button
+            id="fr5"
+            style="
+              border-radius: 10px;
+              background-color: transparent;
+              font-weight: 800;
+            "
+          >
+            Original
+          </button>
+          <img class="imgfr" id="fr1" src="/assets/user_image_frame_1.png" />
+          <img class="imgfr" id="fr2" src="/assets/user_image_frame_2.png" />
+          <img class="imgfr" id="fr3" src="/assets/user_image_frame_3.png" />
+          <img class="imgfr" id="fr4" src="/assets/user_image_frame_4.png" />
+        </div>
+        <div class="action-button-after add">
+          <button class="after-frame-bt bt">Use this image</button>
+        </div>
       </div>
     </div>
     <div id="crop-container" class="container" style="display: none">
       <div id="crop-nav">
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow-crop"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
+            viewBox="0 0 24 24"
+            id="left-arrow-crop"
+          >
+            <path
+              d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"
+            ></path>
+          </svg>
         </div>
 
         <div class="flip">
@@ -117,7 +145,7 @@
     </div>
 
     <script src="/cropper.js"></script>
-    
+
     <script src="./index.js"></script>
   </body>
 </html>
