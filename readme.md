@@ -14,3 +14,5 @@ About this web-app:-
 4:-Sometime during applying frames i needed to use  jquery for masking cropped image and applying frames.
 
 5:-I have used comments so that anyone who reads my code can understand it easily.
+
+6:- It is responsive
