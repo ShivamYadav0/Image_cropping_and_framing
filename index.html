@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="stylesheet" href="/cropper.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="load">
+      <img src="./assets/WhatsApp Image 2023-03-28 at 8.18.15 PM.jpeg" />
+    </div>
+    <div id="home-1">
+      <div id="home" style="display: none">
+        <div class="nav">
+          <img
+            class="logo"
+            src="./assets/WhatsApp_Image_2023-03-28_at_8.19.50_PM-removebg-preview.png"
+          />
+          <div class="add">
+            <div  id="left-arrow-div">
+            <svg xmlns="http://www.w3.org/2000/svg" id="left-arrow">
+              <path
+                fill="#6563ff"
+                d="M14.121 17.243a.997.997 0 0 1-.707-.293l-4.242-4.243a1 1 0 0 1 0-1.414l4.242-4.243a1 1 0 0 1 1.414 1.414L11.293 12l3.535 3.536a1 1 0 0 1-.707 1.707Z"
+              ></path>
+            </svg>
+          </div>
+            <p class="text">Add Image/Icon</p>
+          </div>
+        </div>
+        <div class="upload_wrapper">
+          <p class="text" style="font-weight: 400">Upload Image</p>
+          <input
+            type="file"
+            id="input-img"
+            multiple
+            accept="image/*"
+            style="display: none"
+          />
+          <button class="bt" id="input-bt">Choose from Device</button>
+        </div>
+        <div id="img-div"></div>
+      </div>
+       <div id="hide" style="display: none;"></div>
+      <div class="container container-after frame-wrapper"  style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cancel"><path d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+        <span>Uploaded Image</span>
+          <div class="image-workspace-after">
+           
+            <img id="onframe-image" src="" alt="" />
+           
+          </div>
+          <div id="frame-selector" class="framer-selector-class">
+            <button id="fr5" style="border-radius: 10px; background-color: transparent; font-weight: 800;">Original</button>
+           <img class="imgfr" id="fr1" src="/assets/user_image_frame_1.png" />
+           <img  class="imgfr" id="fr2" src="/assets/user_image_frame_2.png" />
+           <img  class="imgfr" id="fr3" src="/assets/user_image_frame_3.png" />
+           <img  class="imgfr" id="fr4" src="/assets/user_image_frame_4.png" />
+          </div>
+          <div class="action-button-after add">
+            <button class="download-after bt">Use this image</button>
+          </div>
+      </div>
+    </div>
+    <div id="crop-container" class="container" style="display: none">
+      <div id="crop-nav">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow-crop"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg>
+        </div>
+
+        <div class="flip">
+          <span>Flip Image</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+              <path
+                d="M17 13.65 15.95 12.575 18.775 9.75H11.25V8.25H18.775L15.95 5.425L17 4.35L21.65 9ZM7 19.65 2.35 15 7 10.35 8.05 11.425 5.225 14.25H12.75V15.75H5.225L8.05 18.575Z"
+              />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+              <path
+                d="M15 21.65 10.35 17 11.425 15.95 14.25 18.775V11.25H15.75V18.775L18.575 15.95L19.65 17ZM8.25 12.75V5.225L5.425 8.05L4.35 7L9 2.35L13.65 7L12.575 8.05L9.75 5.225V12.75Z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="rotate">
+          <span>Rotate image</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+              <path
+                d="M20.5 12.05H18.975Q18.825 11.2 18.5 10.387Q18.175 9.575 17.65 8.85L18.725 7.8Q19.45 8.675 19.9 9.762Q20.35 10.85 20.5 12.05ZM13.05 21.5V19.95Q13.9 19.825 14.713 19.5Q15.525 19.175 16.25 18.65L17.3 19.725Q16.35 20.45 15.288 20.9Q14.225 21.35 13.05 21.5ZM18.725 18.3 17.65 17.25Q18.175 16.525 18.5 15.712Q18.825 14.9 18.975 14.05H20.5Q20.375 15.2 19.925 16.275Q19.475 17.35 18.725 18.3ZM11.05 21.5Q7.825 21.075 5.688 18.675Q3.55 16.275 3.55 13.05Q3.55 9.5 6.025 7.025Q8.5 4.55 12.05 4.55H12.5L10.7 2.725L11.75 1.65L15.4 5.3L11.75 8.95L10.7 7.9L12.55 6.05H12.05Q9.125 6.05 7.088 8.088Q5.05 10.125 5.05 13.05Q5.05 15.65 6.75 17.613Q8.45 19.575 11.05 19.975Z"
+              />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+              <path
+                d="M3.55 12.05Q3.7 10.85 4.15 9.762Q4.6 8.675 5.325 7.8L6.4 8.85Q5.875 9.575 5.55 10.387Q5.225 11.2 5.075 12.05ZM11 21.5Q9.825 21.35 8.763 20.9Q7.7 20.45 6.75 19.725L7.8 18.65Q8.525 19.175 9.338 19.5Q10.15 19.825 11 19.95ZM5.325 18.3Q4.575 17.35 4.125 16.275Q3.675 15.2 3.55 14.05H5.075Q5.225 14.9 5.55 15.712Q5.875 16.525 6.4 17.25ZM13 21.5V19.975Q15.6 19.575 17.3 17.613Q19 15.65 19 13.05Q19 10.125 16.962 8.088Q14.925 6.05 12 6.05H11.5L13.35 7.9L12.3 8.95L8.65 5.3L12.3 1.65L13.35 2.725L11.55 4.55H12Q15.55 4.55 18.025 7.025Q20.5 9.5 20.5 13.05Q20.5 16.275 18.363 18.675Q16.225 21.075 13 21.5Z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="action-button">
+          <button class="download">Crop</button>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-workspace">
+          <img src="" alt="" />
+          <span>Image Work Space</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/cropper.js"></script>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>
