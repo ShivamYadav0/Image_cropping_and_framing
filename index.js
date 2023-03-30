@@ -1,8 +1,7 @@
-var hiddenUpload = document.querySelector(".action-button .hidden-upload");
+
 var image_workspaceSpan = document.querySelector(".image-workspace span");
 var rotate = document.querySelectorAll(".rotate svg");
 var flip = document.querySelectorAll(".flip svg");
-var move = document.querySelectorAll(" .move svg");
 const fileInput = document.getElementById("input-img");
 const fileupload = document.getElementById("img-div");
 const fileButton = document.getElementById("input-bt");
@@ -11,7 +10,7 @@ const load = document.getElementById("load");
 const home1 = document.getElementById("home-1");
 const crop_container = document.getElementById("crop-container");
 var actionButton = document.querySelectorAll(".action-button button");
-let imageObj;
+
 //function to handle image uploaded and then cropping it
 fileInput.onchange = () => {
   let selectedFile = fileInput.files[0];
@@ -157,7 +156,8 @@ frames5.onclick = () => {
 
 // Back arrow section 
 document.querySelector("#left-arrow-div").onclick = () => {
-  window.location.reload();
+  //window.location.reload();
+  window.close()
 };
 document.querySelector("#left-arrow-crop").onclick = () => {
   document.querySelector("#crop-container").style.display = "none";
